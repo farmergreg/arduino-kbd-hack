@@ -3,9 +3,9 @@
 
 #include <SPI.h>
 #include <hidboot.h>
-#include "Chameleon.h"
+#include "arduino-kbd-hack.h"
 
-class LogParser : public ChameleonParser {   
+class LogParser : public UsbHackingParser {   
   public:
     virtual void Parse(HID *hid, bool is_rpt_id, uint8_t len, uint8_t *buf);
 };

@@ -10,13 +10,13 @@ void MainParser::Parse(HID *hid, bool is_rpt_id, uint8_t len, uint8_t *buf) {
   MacroParser mp;
   TransmitParser tp;
   LogParser lp;
-  ChameleonParser *p[] = { &slp
+  UsbHackingParser *p[] = { &slp
                            , &mp
                            , &tp
                            //, &lp
                          };
 
-  for (int i = 0; i < sizeof(p) / sizeof(ChameleonParser); i++) {
+  for (int i = 0; i < sizeof(p) / sizeof(UsbHackingParser); i++) {
     p[i]->Parse(hid, is_rpt_id, len, buf);
   }
 }

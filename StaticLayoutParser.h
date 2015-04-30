@@ -2,9 +2,9 @@
 #define _StaticLayoutParser_h_
 
 #include <hidboot.h>
-#include "Chameleon.h"
+#include "arduino-kbd-hack.h"
 
-class StaticLayoutParser : public ChameleonParser {   
+class StaticLayoutParser : public UsbHackingParser {   
   public:
     virtual void Parse(HID *hid, bool is_rpt_id, uint8_t len, uint8_t *buf);
 };
